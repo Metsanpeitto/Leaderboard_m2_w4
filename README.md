@@ -4,27 +4,6 @@
 
 ![Alt text](screenshot.png?raw=true 'Screenshot')
 
-## Learning objectives
-
-- Use callbacks and promises.
-- Learn how to use proper ES6 syntax.
-- Use ES6 modules to write modular JavaScript.
-- Use webpack to bundle JavaScript.
-
-### Project requirements
-
-
-- **IMPORTANT NOTE** This is the first time you will use [Gitflow](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md). Keep that in mind!
-- Create an **npm project with webpack**. (If you need a refresher, check the previous project or webpack exercise).
-- Write plain HTML markup with minimum styling (just to make the layout), because you will implement styles in the following steps. Use this wireframe as a guide:
-
-<p align="center">
-  <img src="./images/leaderboard_wireframe.png" alt="Basic UI"  width="500px"/>
-</p>
-
-- Don't make API calls (you'll do it in a following lesson).
-- Use ES6 modules, with *import* and *export*.
-
 
 
 =======
