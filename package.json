@@ -1,5 +1,5 @@
 {
-  "name": "webpack_m2-w2",
+  "name": "leaderboard_m2_w4",
   "version": "1.0.0",
   "description": "![Alt text](screenshot.png?raw=true 'Screenshot')",
   "private": true,
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Metsanpeitto/webpack_m2-w2.git"
+    "url": "git+https://github.com/Metsanpeitto/leaderboard_m2_w4.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Metsanpeitto/webpack_m2-w2/issues"
+    "url": "https://github.com/Metsanpeitto/leaderboard_m2_w4/issues"
   },
-  "homepage": "https://github.com/Metsanpeitto/webpack_m2-w2",
+  "homepage": "https://github.com/Metsanpeitto/leaderboard_m2_w4",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.2.6",
