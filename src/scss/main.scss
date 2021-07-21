@@ -1,0 +1,113 @@
+/* -----------------------------------------------------------------------------------
+
+    Template Name: Portfolio
+    Description: This is a portfolio project. Built for Microverse.
+    Author: Abraham Rodriguez ( Abi )
+    Author URI: https://portfolio.waldenberginc.com
+
+-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+   Folder Architecture
+
+   1._style
+   |
+   |
+   |
+   |___1.1 abstract
+   |              |
+   |              |
+   |              |___1.1.1 boxes
+   |              |
+   |              |
+   |              |___1.1.2 variables   
+   |
+   |
+   |___1.2 base
+   |           |
+   |           |
+   |           |___1.2.1 animations
+   |           |
+   |           |
+   |           |___1.2.2 images
+   |           |
+   |           |
+   |           |___1.2.3 typography
+   |
+   |
+   |___1.3 components
+   |                 |
+   |                 |
+   |                 |___1.3.1 buttons
+   |                 |
+   |                 |
+   |                 |___1.3.2 inputs
+   |
+   |
+   |___1.4 layout
+                 |
+                 |
+                 |___1.4.1 landing
+
+
+*/
+@import "abstract/boxes";
+@import "abstract/variables";
+@import "base/animations";
+@import "base/images";
+@import "base/typography";
+@import "components/buttons";
+@import "components/inputs";
+@import "layout/landing";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  height: 100%;
+  padding: 5%;
+  margin: 0;
+  font-family:'Indie Flower',sans-serif;
+   font-weight: 700;
+}
+
+ul {
+  padding: unset;
+  display: contents;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 10%;
+}
+
+
+
+input {
+  color: #222;
+  background-color: white;
+  border: 2px solid black;
+}
+
+input:focus-visible {
+  outline: unset;
+}

@@ -1,0 +1,660 @@
+/* -----------------------------------------------------------------------------------
+
+    Template Name: Portfolio
+    Description: This is a portfolio project. Built for Microverse.
+    Author: Abraham Rodriguez ( Abi )
+    Author URI: https://portfolio.waldenberginc.com
+
+-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+   Folder Architecture
+
+   1._style
+   |
+   |
+   |
+   |___1.1 abstract
+   |              |
+   |              |
+   |              |___1.1.1 boxes
+   |              |
+   |              |
+   |              |___1.1.2 variables   
+   |
+   |
+   |___1.2 base
+   |           |
+   |           |
+   |           |___1.2.1 animations
+   |           |
+   |           |
+   |           |___1.2.2 images
+   |           |
+   |           |
+   |           |___1.2.3 typography
+   |
+   |
+   |___1.3 components
+   |                 |
+   |                 |
+   |                 |___1.3.1 buttons
+   |
+   |
+   |___1.4 layout
+                 |
+                 |
+                 |___1.4.1 landing
+
+
+*/
+/*          Box style          */
+@import 'https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap';
+.box {
+  background: #fff;
+  border: solid black;
+  border-color: black;
+  float: left;
+}
+
+.box1 {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+.box2 {
+  width: 350px;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+
+.box3 {
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+}
+
+.oddboxinner {
+  margin: 15px;
+  transform: rotate(-2deg);
+}
+
+.evenboxinner {
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 0 5px;
+  float: right;
+  background: #ddd;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
+}
+
+@-webkit-keyframes rise {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0.000001vh;
+  }
+}
+@keyframes rise {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0.000001vh;
+  }
+}
+@-webkit-keyframes set {
+  0% {
+    transform: translateY(-20vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes set {
+  0% {
+    transform: translateY(-20vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rise {
+  0% {
+    top: 20vh;
+  }
+  100% {
+    top: 0.000001vh;
+  }
+}
+@-webkit-keyframes dawn {
+  0% {
+    top: 0.000001vh;
+    visibility: visible;
+  }
+  100% {
+    top: 100vh;
+    visibility: hidden;
+  }
+}
+@keyframes dawn {
+  0% {
+    top: 0.000001vh;
+    visibility: visible;
+  }
+  100% {
+    top: 100vh;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes line-1-arrives {
+  0% {
+    background-color: #ec5242;
+    transform: translateY(11px) rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes line-1-arrives {
+  0% {
+    background-color: #ec5242;
+    transform: translateY(11px) rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes line-1-leaves {
+  0% {
+    background-color: #272a31;
+    transform: rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    transform: translateY(11px) rotate(45deg);
+  }
+}
+@keyframes line-1-leaves {
+  0% {
+    background-color: #272a31;
+    transform: rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    transform: translateY(11px) rotate(45deg);
+  }
+}
+@-webkit-keyframes line-2-arrives {
+  0% {
+    opacity: unset;
+    transform: translateX(-150vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes line-2-arrives {
+  0% {
+    opacity: unset;
+    transform: translateX(-150vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes line-2-leaves {
+  0% {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-150vw);
+  }
+}
+@keyframes line-2-leaves {
+  0% {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-150vw);
+  }
+}
+@-webkit-keyframes line-3-arrives {
+  0% {
+    background-color: #ec5242;
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes line-3-arrives {
+  0% {
+    background-color: #ec5242;
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes line-3-leaves {
+  0% {
+    background-color: #272a31;
+    transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+@keyframes line-3-leaves {
+  0% {
+    background-color: #272a31;
+    transform: translateY(11px) rotate(0deg);
+  }
+  100% {
+    background-color: #ec5242;
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+@-webkit-keyframes menu-btn-arrives {
+  0% {
+    left: 85%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 5%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes menu-btn-arrives {
+  0% {
+    left: 85%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 5%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes menu-btn-leaves {
+  0% {
+    left: 5%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 85%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes menu-btn-leaves {
+  0% {
+    left: 5%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 85%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rain {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+@keyframes rain {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rain {
+  0% {
+    transform: translateY(-5vh) rotate(0deg);
+  }
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+/*
+*
+* images.scss
+*
+* This file contains all the images found in this project
+*
+******************
+
+/*   Global images  */
+h1 {
+  font-size: 42px;
+  line-height: 44px;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 4px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+@media (min-width: 450px) and (max-width: 767px) {
+  h1 {
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 4px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  h6 {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 4px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 22px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+}
+/**
+* buttons.scss
+*
+* Buttons, whatever their purpose, are important design elements.
+* They could be the end point of a Web form or a call to action.
+* Designers have many reasons to style buttons, including to make
+* them more attractive and to enhance usability.
+*
+* - Use white color to transmit trust.
+* - Use black color to transmit being elegant, formal, slick or modern.
+* - Use blue color to transmit stability and confidence.
+* - Use rounded corners, they are easier on the eyes.
+*
+*/
+/*  Component Buttons  */
+button {
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: black;
+}
+
+/**
+* landing.scss
+*
+* This is the Landing Layout were we want to call for an action
+* from the client.
+* If the design from the other layouts have work as expected, and
+* we were able to build up the confidence and convey succesfully the
+* ideas and emotions that we want to transmit, now the user or potential
+* employer would want to hire as to solve his problems.
+*
+* Keep the same design rules than before and remember to make this layout
+* as simple and clean as possible. So the user don't have any distraction
+* or interference that could cost us lose the oportunity.
+ Layout Landing  */
+.l-l-displayer {
+  width: 400px;
+  min-height: 200px;
+}
+.l-l-displayer .l-l-displayer-header {
+  justify-content: space-between;
+  display: flex;
+}
+.l-l-displayer .l-l-displayer-box {
+  width: 400px;
+  height: 300px;
+  transform: rotate(0deg);
+  padding-top: 5%;
+}
+.l-l-displayer .l-l-displayer-box ul li {
+  padding-left: 5%;
+  background-color: gray;
+}
+
+.l-l-add {
+  width: 200px;
+  min-height: 200px;
+  padding: 5%;
+}
+.l-l-add .l-l-add-box {
+  padding-top: 5%;
+}
+.l-l-add .l-l-add-box .l-l-add-box-name {
+  margin-bottom: 5%;
+}
+.l-l-add .l-l-add-btn {
+  margin-top: 10%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  height: 100%;
+  padding: 5%;
+  margin: 0;
+  font-family: "Indie Flower", sans-serif;
+}
+
+ul {
+  padding: unset;
+  display: contents;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 10%;
+}
+
+input {
+  color: #222;
+  background-color: white;
+  border: 2px solid black;
+}
+
+input:focus-visible {
+  outline: unset;
+}/*# sourceMappingURL=main.css.map */
