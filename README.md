@@ -1,4 +1,4 @@
-# leaderboard_m2_w4
+# Leaderboard: hit the API
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
@@ -11,6 +11,17 @@
 - Node.JS
 
 =======
+
+### Project requirements
+
+- Read the [Leaderboard API documentation](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) to learn how to use this API.
+- Create a new game with the name of your choice by using the API.
+- Implement the "Refresh" button (receiving data from the API and parsing the JSON).
+- Implement the form "Submit" button (sending data to the API).
+- Use `async` and `await` JavaScript features to consume the API.
+- No styling is required.
+
+
 
 ## Getting Started
 
@@ -40,7 +51,7 @@ npm install
 ### Usage
 
 ```cmd
-npm test
+npm start
 ```
 
 
