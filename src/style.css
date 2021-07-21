@@ -1,10 +1,89 @@
 body {
   background-color: white;
+  padding: 10%;
 }
 
-h1,
-h3,
-h6,
-p {
+h1, h3, h6, p {
   margin: unset;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 10%;
+}
+
+.l-l-displayer {
+  width: 400px;
+  min-height: 200px;
+  padding: 5%;
+}
+
+.l-l-displayer-header {
+  justify-content: space-between;
+  display: flex;
+}
+
+.l-l-displayer-box {
+  width: 400px;
+  height: 300px;
+}
+
+.btn-refresh {}
+
+.l-l-add {
+  width: 200px;
+  min-height: 200px;
+  padding: 5%;
+}
+
+.l-l-add-box {
+  padding-top: 5%;
+}
+
+.l-l-add-box-name {
+  margin-bottom: 5%;
+}
+
+/*          Box style          */
+
+.box {
+  background: #fff;
+  border: solid black;
+  border-color: black;
+  float: left;
+}
+
+.box1 {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+.box2 {
+  width: 350px;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+
+.box3 {
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+
+.oddboxinner {
+  margin: 15px;
+  transform: rotate(-2deg);
+}
+
+.evenboxinner {
+  transform: rotate(2deg);
+  margin: 15px;
+  padding: 0 5px;
+  float: right;
+  background: #ddd;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
 }
