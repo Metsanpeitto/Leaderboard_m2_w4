@@ -50,5 +50,5 @@
     "node-sass": "^6.0.1",
     "style-loader": "^3.0.0"
   },
-  "main": "server.js"
+  "main": "src.index.js"
 }
