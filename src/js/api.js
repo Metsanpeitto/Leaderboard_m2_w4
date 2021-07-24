@@ -6,9 +6,10 @@ class Api {
     this.newGame = 'Maniac Mansion';
     this.gameId = null;
     this.scores = [];
-    this.init();
+    this.init(); // Calls the API when the page loads for first time and gets scores
   }
 
+  /**         Checks if a game id is stored in local storage               */
   gameIdStored() {
     this.found = false;
     const gameId = JSON.parse(window.localStorage.getItem('gameId'));
@@ -19,12 +20,14 @@ class Api {
     return this.found;
   }
 
+  /**         Checks if this is the first time running the app             */
+  /**         if it is, creates a game score folder in the API             */
   async init() {
     const gameStored = this.gameIdStored();
     if (gameStored === false) {
       fetch(`${this.baseUrl}/games`, {
         mode: 'cors',
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
           'Access-Control-Allow-Origin': '*',
@@ -33,11 +36,11 @@ class Api {
       })
         .then((response) => response.json())
         .then((data) => {
-          const str = data.result;
+          const str = data.result; // These lines modify the received string
           const str1 = str.replace('Game with ID:', '');
           const str2 = str1.replace('added.', '');
           const str3 = str2.replaceAll(/\s/g, '');
-          this.gameId = str3;
+          this.gameId = str3; // The formatted string is stored in local storage
           window.localStorage.setItem('gameId', JSON.stringify(this.gameId));
         })
         .catch((error) => {
@@ -46,12 +49,13 @@ class Api {
     }
   }
 
+  /**         Post name and  score in the API creating a new record        */
   async addScore(name, score) {
     const response = await fetch(
       `${this.baseUrl}/games/${this.gameId}/scores`,
       {
         mode: 'cors',
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
           'Access-Control-Allow-Origin': '*',
@@ -64,6 +68,7 @@ class Api {
     return response;
   }
 
+  /**         Obtains the record of scores from the API          */
   async refresh() {
     const response = await fetch(`${this.baseUrl}/games/${this.gameId}/scores`)
       .then((response) => response.json())

@@ -1,16 +1,11 @@
 /**
 * landing.scss
 *
-* This is the Landing Layout were we want to call for an action
-* from the client.
-* If the design from the other layouts have work as expected, and
-* we were able to build up the confidence and convey succesfully the
-* ideas and emotions that we want to transmit, now the user or potential
-* employer would want to hire as to solve his problems.
+* This file contains all the style of this simple application
+* the chosen minimalistic and retro style selected tries to
+* transmit playfulness and fun through 'hand written' like
+* fonts and boxes.
 *
-* Keep the same design rules than before and remember to make this layout
-* as simple and clean as possible. So the user don't have any distraction
-* or interference that could cost us lose the oportunity.
  Layout Landing  */
 
 .l-l-displayer {
@@ -27,10 +22,11 @@
     width: 400px;
     min-height: 300px;
     transform: rotate(0deg);
-    padding: 2%;
+    padding: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-top: 5%;
+    overflow-x: hidden;
 
     ul {
       li {
@@ -52,19 +48,39 @@
 }
 
 .l-l-add {
-  width: 200px;
   min-height: 200px;
-  padding: 5%;
 
   .l-l-add-box {
-    padding-top: 5%;
+    margin-top: 10%;
+    display: grid;
 
     .l-l-add-box-name {
       margin-bottom: 5%;
+      padding-left: 5%;
+    }
+
+    .l-l-add-box-score {
+      padding-left: 5%;
     }
   }
 
   .l-l-add-btn {
     margin-top: 10%;
+  }
+}
+
+.l-l-banner {
+  display: none;
+  color: #222;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 1% 2% 1% 95%/95% 1% 91% 1%;
+  transform: rotate(-2deg);
+  position: fixed;
+  width: 50%;
+  padding: 2%;
+
+  .l-l-banner-title {
+    text-align: center;
   }
 }
