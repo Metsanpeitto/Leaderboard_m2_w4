@@ -60,7 +60,7 @@ const refresh = () => {
 };
 
 const newScore = () => {
-  api.addScore().then(() => {
+  api.addScore(user, score).then(() => {
     refresh(nameInput, scoreInput);
   });
 };
@@ -71,11 +71,27 @@ refreshBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
+  banner.classList.add("visible");
+  banner.classList.add("fromLeft");
+  console.log(banner);
   if (user !== null && score !== null) {
     if (user !== "" && score !== "") {
+      banner.innerHTML = "Score Submitted Successfuly";
       newScore();
+    } else {
+      banner.innerHTML = "No valid inputs";
     }
+  } else {
+    banner.innerHTML = "No valid inputs";
   }
+  setTimeout(() => {
+    banner.classList.add("toRight");
+    banner.classList.remove("fromLeft");
+  }, 4000);
+  setTimeout(() => {
+    banner.classList.remove("toRight");
+    banner.classList.remove("visible");
+  }, 5500);
 });
 
 nameInput.addEventListener("change", (e) => {

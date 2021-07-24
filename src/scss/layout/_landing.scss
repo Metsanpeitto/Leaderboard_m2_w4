@@ -70,17 +70,50 @@
 }
 
 .l-l-banner {
-  display: none;
-  color: #222;
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 1% 2% 1% 95%/95% 1% 91% 1%;
-  transform: rotate(-2deg);
+  display: grid;
   position: fixed;
-  width: 50%;
-  padding: 2%;
+  color: #222;
 
   .l-l-banner-title {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 1% 2% 1% 95%/95% 1% 91% 1%;
+    transform: rotate(-2deg);
+    width: 60vw;
+    padding: 2%;
     text-align: center;
+    display: none;
+  }
+}
+
+.visible {
+  display: block !important;
+}
+
+.fromLeft {
+  animation: fromLeft 2s ease-in-out;
+}
+
+.toRight {
+  animation: toRight 2s ease-in-out;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100vw) rotate(-6deg);
+  }
+
+  100% {
+    transform: translateX(1vw) rotate(-2deg);
+  }
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(1vw) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateX(100vw) rotate(-6deg);
   }
 }
