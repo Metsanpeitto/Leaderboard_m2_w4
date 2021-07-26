@@ -21,6 +21,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[id].[chunkhash].js',
+    publicPath: '/Leaderboard_m2_w4/',
     clean: true,
   },
   module: {
