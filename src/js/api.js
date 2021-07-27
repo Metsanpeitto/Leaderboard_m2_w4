@@ -25,7 +25,7 @@ class Api {
   async init() {
     const gameStored = this.gameIdStored();
     if (gameStored === false) {
-      fetch(`${this.baseUrl}/games`, {
+      await fetch(`${this.baseUrl}/games`, {
         mode: 'cors',
         method: 'POST',
         headers: {

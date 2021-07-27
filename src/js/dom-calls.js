@@ -1,12 +1,12 @@
 /**         All the DOM manipulation will be done from this module          */
-import Api from "./api.js";
+import Api from './api.js';
 /*          Initializes the active components                               */
-const refreshBtn = document.getElementById("refresh-btn");
-const submitBtn = document.getElementById("submit-btn");
-const nameInput = document.getElementById("name-input");
-const scoreInput = document.getElementById("score-input");
-const scoreList = document.getElementById("list");
-const banner = document.getElementById("banner");
+const refreshBtn = document.getElementById('refresh-btn');
+const submitBtn = document.getElementById('submit-btn');
+const nameInput = document.getElementById('name-input');
+const scoreInput = document.getElementById('score-input');
+const scoreList = document.getElementById('list');
+const banner = document.getElementById('banner');
 
 /*          Initializes the class Api and automatically retrieves scores    */
 const api = new Api();
@@ -18,7 +18,7 @@ let scores = [];
 const handleChange = (e) => {
   const { id } = e.currentTarget;
   const { value } = e.currentTarget;
-  if (id === "name-input") {
+  if (id === 'name-input') {
     user = value;
   } else {
     score = `${value}`;
@@ -29,7 +29,7 @@ const handleChange = (e) => {
 const displayScores = () => {
   scoreList.innerHTML = null;
   scores.forEach((s) => {
-    const li = document.createElement("li");
+    const li = document.createElement('li');
     li.innerHTML = `<h6>${s.user}</h6> : <h6>${s.score}</h6>`;
     scoreList.appendChild(li);
   });
@@ -38,7 +38,7 @@ const displayScores = () => {
 /*          Resets inputs, calls API, and if retrieved, displays scores    */
 const refresh = () => {
   api.refresh().then((response) => {
-    let arr = response;
+    const arr = response;
     if (arr.length > 0) {
       arr.sort((scoreA, scoreB) => {
         const indexA = parseInt(scoreA.score, 10);
@@ -52,8 +52,8 @@ const refresh = () => {
         return 0;
       });
       scores = arr.reverse();
-      nameInput.value = "";
-      scoreInput.value = "";
+      nameInput.value = '';
+      scoreInput.value = '';
       displayScores();
     }
   });
@@ -66,39 +66,38 @@ const newScore = () => {
 };
 
 /*          Initializes events for each active component                   */
-refreshBtn.addEventListener("click", () => {
+refreshBtn.addEventListener('click', () => {
   refresh();
 });
 
-submitBtn.addEventListener("click", () => {
-  banner.classList.add("visible");
-  banner.classList.add("fromLeft");
-  console.log(banner);
+submitBtn.addEventListener('click', () => {
+  banner.classList.add('visible');
+  banner.classList.add('fromLeft');
   if (user !== null && score !== null) {
-    if (user !== "" && score !== "") {
-      banner.innerHTML = "Score Submitted Successfuly";
+    if (user !== '' && score !== '') {
+      banner.innerHTML = 'Score Submitted Successfuly';
       newScore();
     } else {
-      banner.innerHTML = "No valid inputs";
+      banner.innerHTML = 'No valid inputs';
     }
   } else {
-    banner.innerHTML = "No valid inputs";
+    banner.innerHTML = 'No valid inputs';
   }
   setTimeout(() => {
-    banner.classList.add("toRight");
-    banner.classList.remove("fromLeft");
+    banner.classList.add('toRight');
+    banner.classList.remove('fromLeft');
   }, 4000);
   setTimeout(() => {
-    banner.classList.remove("toRight");
-    banner.classList.remove("visible");
+    banner.classList.remove('toRight');
+    banner.classList.remove('visible');
   }, 5500);
 });
 
-nameInput.addEventListener("change", (e) => {
+nameInput.addEventListener('change', (e) => {
   handleChange(e);
 });
 
-scoreInput.addEventListener("change", (e) => {
+scoreInput.addEventListener('change', (e) => {
   handleChange(e);
 });
 
