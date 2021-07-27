@@ -42,9 +42,6 @@ class Api {
           const str3 = str2.replaceAll(/\s/g, '');
           this.gameId = str3; // The formatted string is stored in local storage
           window.localStorage.setItem('gameId', JSON.stringify(this.gameId));
-        })
-        .catch((error) => {
-          console.error('Error:', error);
         });
     }
   }
