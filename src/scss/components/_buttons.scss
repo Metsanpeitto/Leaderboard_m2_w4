@@ -22,4 +22,8 @@ button {
   appearance: none;
   color: black;
   font-family: 'Indie Flower', sans-serif !important;
+
+  &:active {
+    transform: scale(0.8);
+  }
 }
