@@ -32,7 +32,6 @@ If you want a copy of this file go to the github repository and download it from
 
 ### Live
 
-
 [Live](https://metsanpeitto.github.io/leaderboard_m2_w4/)
 
 ### Setup
