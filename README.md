@@ -2,9 +2,6 @@
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-![Alt text](screenshot.png?raw=true 'Screenshot')
-
-
 
 =======
 
