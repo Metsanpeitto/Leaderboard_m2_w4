@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <title>Leader Board</title>
+  </head>
+  <body>
+    <header>
+      <h1>Leaderboard</h1>
+    </header>
+    <main>
+      <section class="l-l-displayer" aria-label="section">
+        <div class="l-l-displayer-header">
+          <h3 class="l-l-displayer-header-title">Recent scores</h3>
+          <button type="button" id="refresh-btn" class="btn-refresh box3">Refresh</button>
+        </div>
+        <div class="l-l-displayer-box box box1">
+          <ul>
+            <li>400</li>
+            <li>300</li>
+            <li>200</li>
+            <li>100</li>
+          </ul>
+        </div>
+      </section>
+      <section class="l-l-add">
+        <div class="l-l-add-header">
+          <h3 class="l-l-add-header-title">Recent scores</h3>
+        </div>
+        <div class="l-l-add-box">
+          <input
+            type="text"
+            class="l-l-add-box-name box3"
+            placeholder="Your name"
+          />
+          <input
+            type="text"
+            class="l-l-add-box-score box3"
+            placeholder="Your score"
+          />
+        </div>
+        <button id="submit-btn" type="submit" class="l-l-add-btn box3">
+          Submit
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
