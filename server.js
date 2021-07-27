@@ -12,3 +12,8 @@ app.use(
     publicPath: config.output.publicPath,
   }),
 );
+
+app.listen(3000, () => {
+
+});
+
