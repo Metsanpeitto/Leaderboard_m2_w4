@@ -47,6 +47,12 @@ cd ./leaderboard_m2_w4
 npm install
 ```
 
+### Build
+
+```cmd
+npm build
+```
+
 ### Usage
 
 ```cmd
@@ -106,4 +112,6 @@ Give a ⭐️ if you like this project!
 - The amazing code reviewers for making me improve every day :thumbsup:
 
 =======
+
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
